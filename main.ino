@@ -22,9 +22,11 @@ void setup() {
   rfid.PCD_Init();
   rfid.PCD_DumpVersionToSerial();
   for (int i = 0; i < sizeof(AUTHORIZED_UIDS) / sizeof(AUTHORIZED_UIDS[0]); i++) {
+    Serial.println("Authorized UIDs:");
     Serial.print(AUTHORIZED_UIDS[i]);
-    Serial.print(" ");
+    Serial.print("");
   }
+  Serial.println("");
 }
 
 void loop() {
